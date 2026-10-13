@@ -1,0 +1,4 @@
+# @deepwhale-cn/dsh-cn-log-retention 的组合层
+- insert:
+    - id: cn-log-retention
+      name: '@deepwhale-cn/dsh-cn-log-retention'

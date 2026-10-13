@@ -1,0 +1,14 @@
+{
+  "id": "LOG-RETENTION-SHORT",
+  "title": "日志留存期短于法定 6 个月",
+  "severity": "high",
+  "source": "《中华人民共和国网络安全法》第二十一条第（三）项 —— 采取监测、记录网络运行状态、网络安全事件的技术措施，并按照规定留存相关的网络日志不少于六个月；GB/T 22239-2019 第三级 · 安全计算环境 · 安全审计 —— 审计记录保留期限不少于六个月",
+  "advice": "这里出现的是天数/月数配置。请确认它就是日志保留期。换算：6 个月按 180 天算。日志轮转的 maxDays / retention / expire 都容易被写成 7 天或 30 天 —— 那是排障用的，不是合规用的。合规留存需要单独一份、保留 ≥180 天、并且不可被应用进程随意删除。",
+  "check": {
+    "type": "file-pattern",
+    "pattern": "(maxDays|max_age|retention|retentionDays|expire|expires|maxAge|keepDays)\\s*[:=]\\s*[\"']?(\\d{1,2}|1[0-7]\\d)[\"']?\\b",
+    "flags": "gi",
+    "exts": [".js", ".mjs", ".cjs", ".ts", ".json", ".yml", ".yaml", ".ini", ".conf", ".properties", ".toml"],
+    "max": 20
+  }
+}

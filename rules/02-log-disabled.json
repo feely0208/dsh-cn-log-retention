@@ -1,0 +1,13 @@
+{
+  "id": "LOG-DISABLED",
+  "title": "日志级别被关闭",
+  "severity": "high",
+  "source": "GB/T 22239-2019 第三级 · 安全计算环境 · 安全审计 —— 应启用安全审计功能，审计覆盖到每个用户",
+  "advice": "日志级别设为 off / none / silent / disabled 等于没有审计记录 —— 出事时无法追溯，测评时是直接扣分项。如果是因为「日志太吵」而关的，请改为调高级别（如只记 warn 以上）而不是全关。",
+  "check": {
+    "type": "file-pattern",
+    "pattern": "(level|log_level|LOG_LEVEL|loglevel)\\s*[:=]\\s*[\"']?(off|none|silent|disabled|false)[\"']?\\b",
+    "flags": "gi",
+    "max": 20
+  }
+}

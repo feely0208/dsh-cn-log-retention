@@ -1,0 +1,14 @@
+{
+  "id": "LOG-NO-SETUP",
+  "title": "项目里找不到任何日志配置",
+  "severity": "medium",
+  "source": "GB/T 22239-2019 第三级 · 安全计算环境 · 安全审计 —— 应启用安全审计功能",
+  "advice": "在依赖清单与常见配置里都没找到日志相关痕迹。这不一定是问题（可能由部署层统一采集），但值得确认：你的系统出错时，有没有可追溯的记录？如果没有，请补上日志方案（写入 + 轮转 + 保留 ≥180 天）。",
+  "check": {
+    "type": "file-lacks",
+    "pattern": "winston|pino|bunyan|log4js|morgan|logging|logback|log4j|structlog|zap|zerolog|syslog|rsyslog",
+    "flags": "i",
+    "paths": ["package.json", "requirements.txt", "go.mod", "pom.xml", "pom.xml"],
+    "evidence": "依赖清单里没有任何日志库"
+  }
+}

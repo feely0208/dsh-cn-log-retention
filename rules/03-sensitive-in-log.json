@@ -1,0 +1,14 @@
+{
+  "id": "LOG-SENSITIVE",
+  "title": "日志里打印了口令或令牌的值",
+  "severity": "high",
+  "source": "GB/T 22239-2019 第三级 · 安全计算环境 · 安全审计 —— 审计记录应受到保护；数据保密性 —— 鉴别信息不应出现在日志中",
+  "advice": "把口令/令牌的**值**写进日志，等于把它放进一个长期留存、可能被导出、可能被多人看到的地方 —— 叠加「留存 6 个月」的要求后，凭据要在日志里躺半年。改为只记「谁、何时、成功与否」。",
+  "check": {
+    "type": "file-pattern",
+    "pattern": "(log|logger|console|print|println|printf)[\\w.]*\\s*\\([^)]{0,80}(?:password|passwd|pwd|token|secret|apiKey|api_key)\\s*[=:]|(log|logger|console|print|println|printf)[\\w.]*\\s*\\(\\s*(?:password|passwd|pwd|token|secret|apiKey|api_key)\\s*[,)]",
+    "flags": "gi",
+    "exts": [".js", ".mjs", ".cjs", ".ts", ".tsx", ".jsx", ".py", ".go", ".java", ".rb", ".php"],
+    "max": 20
+  }
+}
