@@ -1,5 +1,7 @@
 # @deepwhale-cn/dsh-cn-log-retention
 
+[![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/feely0208/dsh-cn-log-retention)
+
 **日志留存合规** —— 检查日志是否开着、是否记了该记的、是否留够**法定的 6 个月**。
 
 ## 不装它会怎样
