@@ -49,7 +49,11 @@ dsh-cn-log-retention --list-rules    # 列出规则和依据
 dsh-cn-log-retention --html r.html   # HTML 报告
 ```
 
-![dsh-cn-log-retention 的检查报告示例](https://www.deepwhale.org.cn/plugin-assets/dsh-cn-log-retention/report.png)
+![dsh-cn-log-retention 检查报告示例](https://www.deepwhale.org.cn/plugin-assets/dsh-cn-log-retention/report.png)
+
+![dsh-cn-log-retention 演示模式输出](https://www.deepwhale.org.cn/plugin-assets/dsh-cn-log-retention/demo.png)
+
+![dsh-cn-log-retention 规则与依据](https://www.deepwhale.org.cn/plugin-assets/dsh-cn-log-retention/rules.png)
 
 ## 边界
 
