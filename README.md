@@ -49,7 +49,7 @@ dsh-cn-log-retention --list-rules    # 列出规则和依据
 dsh-cn-log-retention --html r.html   # HTML 报告
 ```
 
-![报告示例](docs/report.png)
+![dsh-cn-log-retention 的检查报告示例](https://raw.githubusercontent.com/feely0208/dsh-cn-log-retention/main/docs/report.png)
 
 ## 边界
 
