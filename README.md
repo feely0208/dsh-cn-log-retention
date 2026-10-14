@@ -3,7 +3,7 @@
 [![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/feely0208/dsh-cn-log-retention)
 
 
-**关键词**：日志留存 · 日志保留 · 网络日志留存 · 网络安全法 · 六个月 · 审计日志 · 日志合规
+**关键词**：日志留存 · 日志保留 · 审计日志 · 网络日志 · 网络安全法 · 六个月 · 留存不少于六个月 · 日志合规
 **Keywords**: log retention · audit log retention · network log · six months retention · China cybersecurity law
 **日志留存合规** —— 检查日志是否开着、是否记了该记的、是否留够**法定的 6 个月**。
 
